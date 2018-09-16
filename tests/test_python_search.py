@@ -1,20 +1,23 @@
+"""
+Test Case
+"""
+
 import unittest
-from selenium import webdriver
-from page import MainPage, SearchResultsPage
+
+from pages.main_page import MainPage
+from pages.search_page import SearchResultsPage
+from tests.base_test import BaseTest
 
 
-class TestPythonOrgSearch(unittest.TestCase):
+class TestPythonOrgSearch(BaseTest):
     """A sample test class to show how page object works"""
-
-    def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.get("http://www.python.org")
 
     def test_search_in_python_org(self):
         """
-        Tests python.org search feature. Searches for the word "pycon" then verified that some results show up.
-        Note that it does not look for any particular text in search results page. This test verifies that
-        the results were not empty.
+        Tests python.org search feature.
+        Searches for the word "pycon" then verified that some results show up.
+        Note that it does not look for any particular text in search results page.
+        This test verifies that the results were not empty.
         """
 
         # Load the main page. In this case the home page of Python.org.
@@ -27,9 +30,6 @@ class TestPythonOrgSearch(unittest.TestCase):
         search_results_page = SearchResultsPage(self.driver)
         # Verifies that the results page is not empty
         assert search_results_page.is_results_found(), "No results found."
-
-    def tearDown(self):
-        self.driver.close()
 
 
 if __name__ == "__main__":

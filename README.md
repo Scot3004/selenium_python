@@ -11,5 +11,5 @@ pip install -r requirements.txt
 ## Generate graph
 
 ```bash
-pycallgraph --include "page.*" --include "TestPythonOrgSearch*" --include "locators.*" --include "element.*" --include "selenium*" graphviz -- ./test_python_search.py
+pycallgraph --include "pages.*" --include "TestPythonOrgSearch*" --include "elements.*" --include "selenium*" graphviz -- ./test_python_search.py
 ```

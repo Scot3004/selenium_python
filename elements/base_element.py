@@ -1,8 +1,13 @@
+"""
+Elements
+"""
+
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-class BasePageElement(object):
+class BasePageElement:
     """Base page class that is initialized on every page object class."""
+    locator = None
 
     def __set__(self, obj, value):
         """Sets the text to the value supplied"""
