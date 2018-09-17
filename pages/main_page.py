@@ -13,6 +13,9 @@ class MainPage(BasePage):
 
     search_text_element = SearchTextElement()
 
+    def load(self):
+        self.driver.get("http://www.python.org")
+
     def is_title_matches(self):
         """Verifies that the hardcoded text "Python" appears in page title"""
         return "Python" in self.driver.title

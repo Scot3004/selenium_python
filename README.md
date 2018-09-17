@@ -1,4 +1,4 @@
-# selenium_python
+# Selenium with Python
 
 ## Install
 
@@ -6,6 +6,12 @@ Please use virtualenv if you don't want to add dependencies to your global pytho
 
 ```bash
 pip install -r requirements.txt
+```
+
+## Lint Code
+
+```bash
+pylint ./**/*.py
 ```
 
 ## Generate graph

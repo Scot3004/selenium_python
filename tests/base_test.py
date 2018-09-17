@@ -12,7 +12,6 @@ class BaseTest(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        self.driver.get("http://www.python.org")
 
     def tearDown(self):
         self.driver.close()

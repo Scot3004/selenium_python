@@ -8,9 +8,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from tests.base_test import BaseTest
 
 
-class TestPythonOrgSearch(BaseTest):
+class TestPythonOrgSearchNoPOM(BaseTest):
     """A sample test class to show how page object works"""
-
 
     def test_search_in_python_org(self):
         """
@@ -20,6 +19,7 @@ class TestPythonOrgSearch(BaseTest):
         This test verifies that the results were not empty.
         """
 
+        self.driver.get("http://www.python.org")
         # Checks if the word "Python" is in title
         assert "Python" in self.driver.title, "python.org title doesn't match."
         # Sets the text of search textbox to "pycon"

@@ -22,6 +22,7 @@ class TestPythonOrgSearch(BaseTest):
 
         # Load the main page. In this case the home page of Python.org.
         main_page = MainPage(self.driver)
+        main_page.load()
         # Checks if the word "Python" is in title
         assert main_page.is_title_matches(), "python.org title doesn't match."
         # Sets the text of search textbox to "pycon"
