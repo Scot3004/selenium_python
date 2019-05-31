@@ -1,0 +1,12 @@
+language: python
+python: "3.6"
+install:
+  - pip install -r requirements.txt
+  - webdriverdownloader firefox
+script: python -m unittest
+env:
+  global:
+    - MOZ_HEADLESS=1
+    - PATH=${PATH}:${HOME}/bin
+addons:
+  firefox: latest
