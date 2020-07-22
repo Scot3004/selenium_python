@@ -13,6 +13,6 @@ six==1.15.0
 soupsieve==2.0.1
 tqdm==4.48.0
 typed-ast==1.4.1
-urllib3==1.25.9
+urllib3==1.25.10
 webdriverdownloader==1.1.0.3
 wrapt==1.12.1
