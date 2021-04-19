@@ -5,7 +5,7 @@ Search page
 from pages.base_page import BasePage
 
 
-class SearchResultsPage(BasePage):
+class SearchResultsPage(BasePage):  # pylint: disable=too-few-public-methods
     """Search results page action methods come here"""
 
     def is_results_found(self):

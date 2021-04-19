@@ -14,6 +14,7 @@ class MainPage(BasePage):
     search_text_element = SearchTextElement()
 
     def load(self):
+        """Loads the python.org page"""
         self.driver.get("http://www.python.org")
 
     def is_title_matches(self):
