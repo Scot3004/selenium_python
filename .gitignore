@@ -204,5 +204,11 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
+### vscode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 # End of https://www.gitignore.io/api/python,pycharm
